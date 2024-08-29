@@ -2,6 +2,48 @@
 <html>
   <head>
     <title>WakeUpTimes App</title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        text-align: center;
+        color: #333;
+      }
+ 
+      h1 {
+        color: red;
+      }
+ 
+      p {
+        line-height: 1.5;
+      }
+
+      #calc-btn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #333;
+        cursor: pointer;
+      }
+
+      #calc-btn:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .cycle {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #333;
+        margin: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <h1>WakeUpTimes App</h1>
@@ -14,6 +56,45 @@
       if you've completed several cycles prior to waking up.
     </p>
     <p>If you go to bed now, when should you wake up?</p>
-    <button>Calculate</button>
+    <button
+      id="calc-btn"
+      onclick="handleClick()"
+      >Calculate
+    </button>
+
+    <p>
+      If you go to bed right now<sup>*</sup>, try to wake up at one of these times:
+    </p>
+    <div id="wakeup-hours-div" class="wakeup-hours">
+      <!--<div id="cycle-1" class="cycle">12:15 AM</div>
+      <div id="cycle-2" class="cycle">1:45 AM</div>
+      <div id="cycle-3" class="cycle">3:15 AM</div>
+      <div id="cycle-4" class="cycle">4:45 AM</div>
+      <div id="cycle-5" class="cycle">6:15 AM</div>
+      <div id="cycle-6" class="cycle">7:45 AM</div>-->
+    </div>
+    <p>
+      <sup>*</sup>It takes the average human fourteen minutes to fall asleep.
+    </p>
+    <h1>
+      Goodnight!
+    </h1>
+
+    <!-- “onclick” -> attribute
+    “document” -> data structure
+    “id” is supposed to be unique -->
+
+    <!-- <script>
+      const calcBtn = document.getElementById("calc-btn");
+      calcBtn.onclick = handleClick;  // no parentheses; if you put parentheses, 
+      // function gets called right when line executes, not when button is clicked.
+      // assigning handleClick, not calling.
+
+      function handleClick() { // keyword function to make a function
+        window.alert('EN.601.280!');
+        console.log('FSJS!');
+      }
+    </script> -->
+    <script src="index.js"></script>
   </body>
 </html>
